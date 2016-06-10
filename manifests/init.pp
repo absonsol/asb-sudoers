@@ -18,6 +18,7 @@ class sudoers (
   {
     package { $sudoers::params::packagename:
       ensure => $package_ensure,
+      before => Package['/etc/sudoers.d'],
     }
   }
 
@@ -29,6 +30,7 @@ class sudoers (
       group   => 'root',
       mode    => '0440',
       content => template("${module_name}/sudoers.erb"),
+      before  => File['/etc/sudoers.d'],
     }
   }
 
