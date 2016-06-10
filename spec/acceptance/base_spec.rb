@@ -38,12 +38,12 @@ describe 'sudoers class' do
 
     describe file('/etc/sudoers.d/10_10_sudo_rekcuf') do
       it { should be_file }
-      its(:content) { should match 'rekcuf ALL=(ALL) NOPASSWD: ALL' }
+      its(:content) { should include('rekcuf ALL=(ALL) NOPASSWD: ALL') }
     end
 
     describe file('/etc/sudoers.d/10_10_sudo_ualoc') do
       it { should be_file }
-      its(:content) { should match 'ualoc ALL=(ALL) ALL' }
+      its(:content) { should include('ualoc ALL=(ALL) ALL') }
     end
 
   end
