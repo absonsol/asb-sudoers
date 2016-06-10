@@ -15,7 +15,7 @@ describe 'sudoers class' do
       }
 
       sudoers::sudo { 'ualoc':
-        withoutpassword => true,
+        withoutpassword => false,
       }
 
       EOF
