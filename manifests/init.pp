@@ -18,7 +18,7 @@ class sudoers (
   {
     package { $sudoers::params::packagename:
       ensure => $package_ensure,
-      before => Package['/etc/sudoers.d'],
+      before => File['/etc/sudoers.d'],
     }
   }
 
