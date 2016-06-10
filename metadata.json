@@ -1,35 +1,35 @@
 {
   "name": "eyp-sudoers",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "author": "eyp",
   "summary": "manages sudoers",
   "license": "Apache-2.0",
-  "source": "",
-  "issues_url": null,
-  "project_page": "http://systemadmin.es",
+  "source": "https://github.com/NTTCom-MS/eyp-sudoers",
+  "issues_url": "https://github.com/NTTCom-MS/eyp-sudoers/issues",
+  "project_page": null,
   "dependencies": [
     {"version_requirement":">= 1.0.0","name":"puppetlabs/stdlib"}
   ],
   "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",
-      "operatingsystemrelease": [ "5", "6", "7" ]
+      "operatingsystemrelease": [ "6", "7" ]
     },
     {
       "operatingsystem": "CentOS",
-      "operatingsystemrelease": [ "5", "6", "7" ]
+      "operatingsystemrelease": [ "6", "7" ]
     },
     {
       "operatingsystem": "Scientific",
-      "operatingsystemrelease": [ "5", "6", "7" ]
+      "operatingsystemrelease": [ "6", "7" ]
     },
     {
       "operatingsystem": "OEL",
-      "operatingsystemrelease": [ "5", "6", "7" ]
+      "operatingsystemrelease": [ "6", "7" ]
     },
     {
       "operatingsystem": "OracleLinux",
-      "operatingsystemrelease": [ "5", "6", "7" ]
+      "operatingsystemrelease": [ "6", "7" ]
     },
     {
       "operatingsystem": "Ubuntu",

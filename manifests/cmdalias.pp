@@ -1,7 +1,7 @@
 define sudoers::cmdalias(
                           $command,
-                          $order='10',
-                          $cmdname=$name,
+                          $order   = '10',
+                          $cmdname = $name,
                         ) {
   #TODO: refer per tindre dependencies automatiques
 

@@ -1,5 +1,7 @@
 class sudoers::params {
 
+  $packagename='sudo'
+
   case $::osfamily
   {
     'redhat':
