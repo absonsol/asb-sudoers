@@ -1,8 +1,8 @@
 define sudoers::useralias(
-                          $users,
-                          $order='10',
-                          $useraliasname=$name,
-                        ) {
+                            $users,
+                            $order ='10',
+                            $useraliasname = $name,
+                          ) {
   #TODO: refer per tindre dependencies automatiques
 
   validate_array($users)

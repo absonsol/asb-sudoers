@@ -2,14 +2,24 @@
 # puppet managed file - DO NOT EDIT
 #
 
+<% if @requiretty -%>
+Defaults  requiretty
+<% else -%>
+Defaults  !requiretty
+<% end -%>
 
-
-
+<% if @visiblepw -%>
+#
+# Allow to run if unable to disable echo on the tty.
+#
+Defaults  visiblepw
+<% else -%>
 #
 # Refuse to run if unable to disable echo on the tty. This setting should also be
 # changed in order to be able to use sudo without a tty. See requiretty above.
 #
-Defaults   !visiblepw
+Defaults  !visiblepw
+<% end -%>
 
 #
 # Preserving HOME has security implications since many programs
