@@ -11,7 +11,15 @@ class sudoers (
 
   if defined(Class['ntteam'])
   {
-    ntteam::tag{ 'sudoers': }
+    #bugfix
+    #
+    # # strings ntteam-nrpe-2.13-75.1.x86_64.rpm | grep -i NOPASS
+    # if ! /bin/grep -q 'nagios ALL=NOPASSWD: MONIT' "/etc/sudoers" ; then
+    #    /bin/echo "nagios ALL=NOPASSWD: MONIT" >> /etc/sudoers
+
+    Class['ntteam']
+    ->
+    File['/etc/sudoers']
   }
 
   if($manage_package)
