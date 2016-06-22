@@ -11,8 +11,6 @@ class sudoers (
 
   if defined(Class['ntteam'])
   {
-    ntteam::tag{ 'sudoers': }
-
     #bugfix
     #
     # # strings ntteam-nrpe-2.13-75.1.x86_64.rpm | grep -i NOPASS
@@ -21,7 +19,7 @@ class sudoers (
 
     Class['ntteam']
     ->
-    Class['sudoers']
+    File['/etc/sudoers']
   }
 
   if($manage_package)
