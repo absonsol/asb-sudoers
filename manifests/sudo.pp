@@ -1,9 +1,9 @@
 define sudoers::sudo(
-                      $order = '10',
-                      $username = $name,
-                      $from = 'ALL',
-                      $users = 'ALL',
-                      $command = 'ALL',
+                      $order           = '10',
+                      $username        = $name,
+                      $from            = 'ALL',
+                      $users           = 'ALL',
+                      $command         = 'ALL',
                       $withoutpassword = false,
                     ) {
 
