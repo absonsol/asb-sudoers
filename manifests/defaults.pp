@@ -9,7 +9,7 @@ define sudoers::defaults(
     owner   => 'root',
     group   => 'root',
     mode    => '0440',
-    content => inline_template('Defaults<% if defined?(@username) %>:<%= @username %><% end %> <%= @default_name %>'),
+    content => template("${module_name}/defaults.erb"),
     require => File['/etc/sudoers.d'],
   }
 }
