@@ -18,6 +18,10 @@ describe 'sudoers class' do
         withoutpassword => false,
       }
 
+      sudoers::defaults { 'requiretty':
+        username => 'nrpe',
+      }
+
       EOF
 
       # Run it twice and test for idempotency
@@ -44,6 +48,11 @@ describe 'sudoers class' do
     describe file('/etc/sudoers.d/10_10_sudo_ualoc') do
       it { should be_file }
       its(:content) { should include('ualoc ALL=(ALL) ALL') }
+    end
+
+    describe file('/etc/sudoers.d/10_defaults_requiretty_nrpe') do
+      it { should be_file }
+      its(:content) { should include('Defaults:nrpe requiretty') }
     end
 
   end
