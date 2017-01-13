@@ -71,6 +71,17 @@ sudos:
     command: /usr/bin/service
 ```
 
+sudoers::defaults:
+
+```puppet
+sudoers::defaults { '!requiretty':
+  username => 'nrpe',
+}
+```
+
+```
+
+```
 ## Reference
 
 ### classes
