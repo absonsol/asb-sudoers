@@ -5,7 +5,7 @@ define sudoers::defaults(
                         ) {
 
   # Defaults:nrpe !requiretty
-  file { "/etc/sudoers.d/${order}_defaults_${cmdname}_${username}":
+  file { "/etc/sudoers.d/${order}_defaults_${default_name}_${username}":
     owner   => 'root',
     group   => 'root',
     mode    => '0440',
