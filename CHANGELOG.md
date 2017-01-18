@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.21
+
+* added support for SLES11SP3
+
 ## 0.1.20
 
 * bugfix

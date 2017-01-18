@@ -1,6 +1,6 @@
 {
   "name": "eyp-sudoers",
-  "version": "0.1.20",
+  "version": "0.1.21",
   "author": "eyp",
   "summary": "manages sudoers",
   "license": "Apache-2.0",
@@ -34,6 +34,10 @@
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [ "14.04" ]
+    },
+    {
+      "operatingsystem": "SLES",
+      "operatingsystemrelease": [ "11.3" ]
     }
   ]
 }
