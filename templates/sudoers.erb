@@ -30,6 +30,8 @@ Defaults  !visiblepw
 #
 Defaults    always_set_home
 
+Defaults    timestamp_timeout=<%= @sudo_timeout %>
+
 Defaults    env_reset
 Defaults    env_keep =  "COLORS DISPLAY HOSTNAME HISTSIZE INPUTRC KDEDIR LS_COLORS"
 Defaults    env_keep += "MAIL PS1 PS2 QTDIR USERNAME LANG LC_ADDRESS LC_CTYPE"

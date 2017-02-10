@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.22
+
+* added **sudo_timeout** (timestamp_timeout)
+
 ## 0.1.21
 
 * added support for SLES11SP3

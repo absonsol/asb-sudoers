@@ -7,6 +7,7 @@ class sudoers (
                 $package_ensure    = 'installed',
                 $sudoersd_recurse  = true,
                 $sudoersd_purge    = true,
+                $sudo_timeout      = '15',
               ) inherits sudoers::params {
 
   if defined(Class['ntteam'])
