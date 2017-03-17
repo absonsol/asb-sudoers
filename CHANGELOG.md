@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.23
+
+* added ensure for **sudoers::sudo**
+
 ## 0.1.22
 
 * added **sudo_timeout** (timestamp_timeout)

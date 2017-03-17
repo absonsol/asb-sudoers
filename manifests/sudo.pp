@@ -1,4 +1,5 @@
 define sudoers::sudo(
+                      $ensure          = 'present',
                       $order           = '10',
                       $username        = $name,
                       $from            = 'ALL',
@@ -8,6 +9,7 @@ define sudoers::sudo(
                     ) {
 
   file { "/etc/sudoers.d/${order}_10_sudo_${name}":
+    ensure  => $ensure,
     owner   => 'root',
     group   => 'root',
     mode    => '0440',
