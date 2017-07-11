@@ -1,3 +1,4 @@
+# puppet2sitepp @sudos
 define sudoers::sudo(
                       $ensure          = 'present',
                       $order           = '10',

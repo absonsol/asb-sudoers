@@ -1,3 +1,4 @@
+# puppet2sitepp @sudoersdefaults
 define sudoers::defaults(
                           $username     = undef,
                           $order        = '10',
