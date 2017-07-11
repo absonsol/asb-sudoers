@@ -5,8 +5,8 @@
   "summary": "manages sudoers",
   "license": "Apache-2.0",
   "source": "https://github.com/NTTCom-MS/eyp-sudoers",
+  "project_page": "https://github.com/NTTCom-MS/eyp-sudoers",
   "issues_url": "https://github.com/NTTCom-MS/eyp-sudoers/issues",
-  "project_page": null,
   "dependencies": [
     {"version_requirement":">= 1.0.0","name":"puppetlabs/stdlib"}
   ],
@@ -38,6 +38,12 @@
     {
       "operatingsystem": "SLES",
       "operatingsystemrelease": [ "11.3" ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 3.8.0"
     }
   ]
 }
