@@ -1,3 +1,4 @@
+# puppet2sitepp @sudoersuseraliases
 define sudoers::useralias(
                             $users,
                             $order         ='10',

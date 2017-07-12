@@ -1,3 +1,4 @@
+# puppet2sitepp @sudoerscmdalises
 define sudoers::cmdalias(
                           $command,
                           $order   = '10',
