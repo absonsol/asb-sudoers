@@ -8,7 +8,7 @@
   "project_page": "https://github.com/NTTCom-MS/eyp-sudoers",
   "issues_url": "https://github.com/NTTCom-MS/eyp-sudoers/issues",
   "dependencies": [
-    {"version_requirement":">= 1.0.0","name":"puppetlabs/stdlib"}
+    {"name":"puppetlabs/stdlib","version_requirement":">= 1.0.0 < 9.9.9"}
   ],
   "operatingsystem_support": [
     {
