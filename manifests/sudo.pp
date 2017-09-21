@@ -1,4 +1,12 @@
 # puppet2sitepp @sudos
+# @params ensure Control the existences of this sudo default: present
+# @params order sudo order default: 10
+# @params username        = $name,
+# @params from            = 'ALL',
+# @params users           = 'ALL',
+# @params command         = 'ALL',
+# @params withoutpassword = false,
+#
 define sudoers::sudo(
                       $ensure          = 'present',
                       $order           = '10',
