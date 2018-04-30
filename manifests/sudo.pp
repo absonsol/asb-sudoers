@@ -1,4 +1,12 @@
 # puppet2sitepp @sudos
+# @params ensure Control the existences of this sudo default: present
+# @params order sudo order default: 10
+# @params username Made up of one or more user names, user IDs (prefixed with ‘#’), system group names and IDs (prefixed with ‘%’ and ‘%#’ respectively), netgroups (prefixed with ‘+’), non-Unix group names and IDs (prefixed with ‘%:’ and ‘%:#’ respectively)default: resource's name
+# @params from            = 'ALL',
+# @params users           = 'ALL',
+# @params command         = 'ALL',
+# @params withoutpassword = false,
+#
 define sudoers::sudo(
                       $ensure          = 'present',
                       $order           = '10',
