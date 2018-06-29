@@ -5,6 +5,7 @@ define sudoers::useralias(
                             $useraliasname = $name,
                           ) {
   #TODO: refer per tindre dependencies automatiques
+  include ::sudoers
 
   validate_array($users)
 
@@ -16,7 +17,7 @@ define sudoers::useralias(
     group   => 'root',
     mode    => '0440',
     content => inline_template("User_Alias <%= @useraliasname %> = <%= @users.join(',') %>\n"),
-    require => File['/etc/sudoers.d'],
+    require => Class['::sudoers'],
   }
 
 }
