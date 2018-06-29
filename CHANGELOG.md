@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.26
+
+* dropped deprecated dependencies
+
 ## 0.1.25
 
 * improved dependencies
