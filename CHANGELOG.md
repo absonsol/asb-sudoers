@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.25
+
+* improved dependencies
+
 ## 0.1.24
 
 * added support for Ubuntu 18.04

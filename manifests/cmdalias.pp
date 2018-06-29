@@ -8,12 +8,14 @@ define sudoers::cmdalias(
 
   validate_re($cmdname, '[A-Z]([A-Z][0-9]_)*')
 
+  include ::sudoers
+
   file { "/etc/sudoers.d/${order}_00_cmdalias_${cmdname}":
     owner   => 'root',
     group   => 'root',
     mode    => '0440',
     content => "Cmnd_Alias ${cmdname} =  ${command}\n",
-    require => File['/etc/sudoers.d'],
+    require => Class['::sudoers'],
   }
 
 }

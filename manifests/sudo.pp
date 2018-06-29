@@ -16,6 +16,7 @@ define sudoers::sudo(
                       $command         = 'ALL',
                       $withoutpassword = false,
                     ) {
+  include ::sudoers
 
   file { "/etc/sudoers.d/${order}_10_sudo_${name}":
     ensure  => $ensure,
@@ -23,6 +24,6 @@ define sudoers::sudo(
     group   => 'root',
     mode    => '0440',
     content => inline_template("<%= @username %> <%= @from %>=(<%= @users %>) <% if @withoutpassword %>NOPASSWD: <% end %><%= @command %>\n"),
-    require => File['/etc/sudoers.d'],
+    require => Class['::sudoers'],
   }
 }
