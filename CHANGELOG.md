@@ -1,12 +1,16 @@
 # CHANGELOG
 
+## 0.1.29
+
+* added support for **RHEL 8**
+
 ## 0.1.28
 
-* added support for SLES 12.4
+* added support for **SLES 12.4**
 
 ## 0.1.27
 
-* added support for SLES 12.3
+* added support for **SLES 12.3**
 
 ## 0.1.26
 
@@ -18,7 +22,7 @@
 
 ## 0.1.24
 
-* added support for Ubuntu 18.04
+* added support for **Ubuntu 18.04**
 
 ## 0.1.23
 
@@ -30,7 +34,7 @@
 
 ## 0.1.21
 
-* added support for SLES11SP3
+* added support for **SLES11SP3**
 
 ## 0.1.20
 
