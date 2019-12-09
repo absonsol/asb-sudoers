@@ -18,7 +18,9 @@ define sudoers::sudo(
                     ) {
   include ::sudoers
 
-  file { "/etc/sudoers.d/${order}_10_sudo_${name}":
+  $name_cleanup = regsubst($name, '[^a-zA-Z]+', '_')
+
+  file { "/etc/sudoers.d/${order}_10_sudo_${name_cleanup}":
     ensure  => $ensure,
     owner   => 'root',
     group   => 'root',

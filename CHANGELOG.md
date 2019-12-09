@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.30
+
+* bugfix: sudo files cannot contain dots
+
 ## 0.1.29
 
 * added support for **RHEL 8**
