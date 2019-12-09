@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.31
+
+* improved regex for sudoers.d files
+
 ## 0.1.30
 
 * bugfix: sudo files cannot contain dots
