@@ -6,7 +6,12 @@
 
 ## 0.1.30
 
-* bugfix: sudo files cannot contain dots
+* bugfix: sudo files cannot contain dots:
+  ```
+  sudo will read each file in /etc/sudoers.d, skipping file names that end in ‘~’ or contain a ‘.’ character to avoid causing problems with package manager or editor temporary/backup files.  Files are
+  parsed in sorted lexical order.  That is, /etc/sudoers.d/01_first will be parsed before /etc/sudoers.d/10_second.  Be aware that because the sorting is lexical, not numeric, /etc/sudoers.d/1_whoops
+  would be loaded after /etc/sudoers.d/10_second.  Using a consistent number of leading zeroes in the file names can be used to avoid such problems.
+  ```
 
 ## 0.1.29
 
