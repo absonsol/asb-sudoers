@@ -7,8 +7,8 @@ define sudoers::defaults(
 
   include ::sudoers
 
-  $username_cleanup = regsubst($username, '[^a-zA-Z]+', '_')
-  $defaults_cleanup = regsubst($default_name, '[^a-zA-Z]+', '_')
+  $username_cleanup = regsubst($username, '[^a-zA-Z0-9]+', '_', 'G')
+  $defaults_cleanup = regsubst($default_name, '[^a-zA-Z0-9]+', '_', 'G')
 
   # Defaults:nrpe !requiretty
   file { "/etc/sudoers.d/${order}_defaults_${defaults_cleanup}_${username_cleanup}":
