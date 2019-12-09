@@ -5,12 +5,11 @@ define sudoers::cmdalias(
                           $cmdname = $name,
                         ) {
   #TODO: refer per tindre dependencies automatiques
-
-  validate_re($cmdname, '[A-Z]([A-Z][0-9]_)*')
-
   include ::sudoers
 
-  file { "/etc/sudoers.d/${order}_00_cmdalias_${cmdname}":
+  $cmdname_cleanup = regsubst($cmdname, '[^a-zA-Z]+', '_')
+
+  file { "/etc/sudoers.d/${order}_00_cmdalias_${cmdname_cleanup}":
     owner   => 'root',
     group   => 'root',
     mode    => '0440',
