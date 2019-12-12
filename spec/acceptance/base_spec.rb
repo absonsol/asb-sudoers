@@ -18,6 +18,11 @@ describe 'sudoers class' do
         withoutpassword => false,
       }
 
+      sudoers::sudo { 'varis':
+        username        => [ 'userA', 'userB' ],
+        withoutpassword => false,
+      }
+
       sudoers::defaults { 'requiretty':
         username => 'nrpe',
       }
@@ -48,6 +53,12 @@ describe 'sudoers class' do
     describe file('/etc/sudoers.d/10_10_sudo_ualoc') do
       it { should be_file }
       its(:content) { should include('ualoc ALL=(ALL) ALL') }
+    end
+
+    describe file('/etc/sudoers.d/10_10_sudo_varis') do
+      it { should be_file }
+      its(:content) { should include('userA ALL=(ALL) ALL') }
+      its(:content) { should include('userB ALL=(ALL) ALL') }
     end
 
     describe file('/etc/sudoers.d/10_defaults_requiretty_nrpe') do
