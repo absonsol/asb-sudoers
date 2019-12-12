@@ -1,6 +1,6 @@
 {
   "name": "eyp-sudoers",
-  "version": "0.1.31",
+  "version": "0.1.32",
   "author": "eyp",
   "summary": "manages sudoers",
   "license": "Apache-2.0",
