@@ -3,6 +3,17 @@
 # <%= @description %>
 #
 <% end -%>
+<% if @username.kind_of?(Array) -%>
+<% @username.each do |eachusername| -%>
+  <%- %><%= eachusername %> <%= @from %>=(<% -%>
+  <%- if @users.kind_of?(Array) -%>
+  <%- %><%= @users.join(',') -%>
+  <%- else -%>
+  <%- %><%= @users -%>
+  <%- end -%>
+  <%- %>) <% if @withoutpassword %>NOPASSWD: <% end %><%= @command %>
+<% end -%>
+<% else -%>
 <%= @username %> <%= @from %>=(<% -%>
 <% if @users.kind_of?(Array) -%>
 <%= @users.join(',') -%>
@@ -10,3 +21,4 @@
 <%= @users -%>
 <% end -%>
 ) <% if @withoutpassword %>NOPASSWD: <% end %><%= @command %>
+<% end -%>
