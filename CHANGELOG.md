@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.1.32
+
+* modified **sudoers::sudo**:
+  - description option
+  - allow users variable to be an array
+
 ## 0.1.31
 
 * improved regex for sudoers.d files

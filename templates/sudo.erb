@@ -1,0 +1,12 @@
+<% if defined?(@description) -%>
+#
+# <%= @description %>
+#
+<% end -%>
+<%= @username %> <%= @from %>=(<% -%>
+<% if @users.kind_of?(Array) -%>
+<%= @users.join(',') -%>
+<% else -%>
+<%= @users -%>
+<% end -%>
+) <% if @withoutpassword %>NOPASSWD: <% end %><%= @command %>

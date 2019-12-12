@@ -15,6 +15,7 @@ define sudoers::sudo(
                       $users           = 'ALL',
                       $command         = 'ALL',
                       $withoutpassword = false,
+                      $description     = undef,
                     ) {
   include ::sudoers
 
@@ -25,7 +26,7 @@ define sudoers::sudo(
     owner   => 'root',
     group   => 'root',
     mode    => '0440',
-    content => inline_template("<%= @username %> <%= @from %>=(<%= @users %>) <% if @withoutpassword %>NOPASSWD: <% end %><%= @command %>\n"),
+    content => template("${module_name}/sudo.erb"),
     require => Class['::sudoers'],
   }
 }
