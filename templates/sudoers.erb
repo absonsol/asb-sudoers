@@ -1,5 +1,5 @@
 #
-# puppet managed file - DO NOT EDIT
+# puppet managed file
 #
 
 <% if @requiretty -%>
@@ -46,6 +46,25 @@ Defaults    env_keep += "LC_TIME LC_ALL LANGUAGE LINGUAS _XKB_CHARSET XAUTHORITY
 # Defaults   env_keep += "HOME"
 
 Defaults    secure_path = /sbin:/bin:/usr/sbin:/usr/bin
+
+Defaults lecture="<%= @lecture %>"
+<% if defined?(@lecture_file) -%>
+Defaults  lecture_file="<%= @lecture_file %>"
+<% end -%>
+
+<% if defined?(@badpass_message) -%>
+Defaults  badpass_message="<%= @badpass_message %>"
+<% end -%>
+<% if defined?(@passwd_tries) -%>
+Defaults   passwd_tries=<%= @passwd_tries %>
+<% end -%>
+<% if defined?(@passwd_timeout) -%>
+Defaults   passwd_timeout=<%= @passwd_timeout %>
+<% end -%>
+
+<% if @insults -%>
+Defaults insults
+<% end -%>
 
 root ALL=(ALL) ALL
 

@@ -8,6 +8,11 @@ class sudoers (
                 $sudoersd_recurse  = true,
                 $sudoersd_purge    = true,
                 $sudo_timeout      = '15',
+                $lecture           = 'once',
+                $lecture_file      = undef,
+                $badpass_message   = undef,
+                $passwd_tries      = undef,
+                $insults           = false,
               ) inherits sudoers::params {
 
   if($manage_package)
