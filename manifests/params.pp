@@ -25,6 +25,9 @@ class sudoers::params {
           /^1[468].*$/:
           {
           }
+          /^20.*$/:
+          {
+          }
           default: { fail("Unsupported Ubuntu version! - ${::operatingsystemrelease}")  }
         }
       }
