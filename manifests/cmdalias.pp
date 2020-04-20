@@ -15,6 +15,7 @@ define sudoers::cmdalias(
     mode    => '0440',
     content => "Cmnd_Alias ${cmdname} =  ${command}\n",
     require => Class['::sudoers'],
+    notify  => Class['::sudoers::configtest'],
   }
 
 }

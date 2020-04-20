@@ -19,7 +19,7 @@ class sudoers (
   {
     package { $sudoers::params::packagename:
       ensure => $package_ensure,
-      before => File['/etc/sudoers.d'],
+      before => [File['/etc/sudoers.d'], Class['sudoers::configtest']],
     }
   }
 
@@ -32,6 +32,7 @@ class sudoers (
       mode    => '0440',
       content => template("${module_name}/sudoers.erb"),
       before  => File['/etc/sudoers.d'],
+      notify  => Class['::sudoers::configtest'],
     }
   }
 
@@ -42,5 +43,9 @@ class sudoers (
     mode    => '0755',
     recurse => $sudoersd_recurse,
     purge   => $sudoersd_purge,
+    notify  => Class['::sudoers::configtest'],
+  }
+
+  class { 'sudoers::configtest':
   }
 }

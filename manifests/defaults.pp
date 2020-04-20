@@ -17,5 +17,6 @@ define sudoers::defaults(
     mode    => '0440',
     content => template("${module_name}/defaults.erb"),
     require => Class['::sudoers'],
+    notify  => Class['::sudoers::configtest'],
   }
 }
