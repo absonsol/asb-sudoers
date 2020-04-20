@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.34
+
+* added sudo configtest on refresh
+
 ## 0.1.33
 
 * added support for **Ubuntu 20.04**

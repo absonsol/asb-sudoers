@@ -18,6 +18,7 @@ define sudoers::useralias(
     mode    => '0440',
     content => inline_template("User_Alias <%= @useraliasname %> = <%= @users.join(',') %>\n"),
     require => Class['::sudoers'],
+    notify  => Class['::sudoers::configtest'],
   }
 
 }

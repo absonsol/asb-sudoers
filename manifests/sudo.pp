@@ -28,5 +28,6 @@ define sudoers::sudo(
     mode    => '0440',
     content => template("${module_name}/sudo.erb"),
     require => Class['::sudoers'],
+    notify  => Class['::sudoers::configtest'],
   }
 }
