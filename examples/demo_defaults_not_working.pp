@@ -8,6 +8,6 @@ sudoers::sudo { 'rekcuf':
   withoutpassword => true,
 }
 
-sudoers::defaults { 'ecture=always':
+sudoers::defaults { 'lecture=always':
   username => 'rekcuf',
 }
