@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 0.1.33
+
+* added support for **Ubuntu 20.04**
+* added mode options to configure global default options
+  - lecture / lecture_file
+  - badpass_message
+  - passwd_timeout
+  - passwd_tries
+  - insults
+
 ## 0.1.32
 
 * modified **sudoers::sudo**:
