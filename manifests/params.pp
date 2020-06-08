@@ -18,21 +18,33 @@ class sudoers::params {
     {
       case $::operatingsystem
       {
-      'Ubuntu':
-      {
-        case $::operatingsystemrelease
+        'Ubuntu':
         {
-          /^1[468].*$/:
+          case $::operatingsystemrelease
           {
+            /^1[468].*$/:
+            {
+            }
+            /^20.*$/:
+            {
+            }
+            default: { fail("Unsupported Ubuntu version! - ${::operatingsystemrelease}")  }
           }
-          /^20.*$/:
-          {
-          }
-          default: { fail("Unsupported Ubuntu version! - ${::operatingsystemrelease}")  }
         }
-      }
-      'Debian': { fail('Unsupported')  }
-      default: { fail('Unsupported Debian flavour!')  }
+        'Debian':
+        {
+          case $::operatingsystemrelease
+          {
+            /^[89].*$/:
+            {
+            }
+            /^10.*$/:
+            {
+            }
+            default: { fail("Unsupported Debian version! - ${::operatingsystemrelease}")  }
+          }
+        }
+        default: { fail('Unsupported Debian flavour!')  }
       }
     }
     'Suse':

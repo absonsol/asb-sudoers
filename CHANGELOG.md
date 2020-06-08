@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.35
+
+* added support for Debian 8, 9 and 10
+
 ## 0.1.34
 
 * added sudo configtest on refresh
