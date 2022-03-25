@@ -14,6 +14,7 @@ class sudoers (
                 $passwd_tries      = undef,
                 $insults           = false,
                 $use_pty           = true,
+                $sudo_logs         = undef,
               ) inherits sudoers::params {
 
   if($manage_package)
