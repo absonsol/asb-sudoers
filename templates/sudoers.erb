@@ -62,6 +62,10 @@ Defaults   passwd_tries=<%= @passwd_tries %>
 Defaults   passwd_timeout=<%= @passwd_timeout %>
 <% end -%>
 
+<% if defined?(@sudo_logs) -%>
+Defaults logfile=<%= @sudo_logs %>
+<% end -%>
+
 <% if @insults -%>
 Defaults insults
 <% end -%>
