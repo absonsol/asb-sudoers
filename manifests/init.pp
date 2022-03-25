@@ -13,6 +13,7 @@ class sudoers (
                 $badpass_message   = undef,
                 $passwd_tries      = undef,
                 $insults           = false,
+                $use_pty           = true,
               ) inherits sudoers::params {
 
   if($manage_package)

@@ -66,6 +66,10 @@ Defaults   passwd_timeout=<%= @passwd_timeout %>
 Defaults insults
 <% end -%>
 
+<% if @use_pty -%>
+Defaults  use_pty
+<% end -%>
+
 root ALL=(ALL) ALL
 
 #no soc un comentari
