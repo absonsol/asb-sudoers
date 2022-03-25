@@ -3,7 +3,8 @@
 ## 0.1.36
 
 **INCOMPATBLE CHANGE
-* Added use_pty as default to meet CaaS
+* Added @use_pty as default to meet CaaS
+* Added @sudo_logs to meet CaaS
 
 ## 0.1.35
 
