@@ -14,7 +14,7 @@ class sudoers (
                 $passwd_tries      = undef,
                 $insults           = false,
                 $use_pty           = true,
-                $sudo_logs         = undef,
+                $sudo_logs         = '"/var/log/sudo.log"',
               ) inherits sudoers::params {
 
   if($manage_package)
