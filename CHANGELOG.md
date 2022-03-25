@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 0.1.36
+
+**INCOMPATBLE CHANGE
+* Added use_pty as default to meet CaaS
+
 ## 0.1.35
 
 * added support for Debian 8, 9 and 10
